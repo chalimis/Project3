@@ -3,6 +3,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%  
+    if ((request.getParameter("name1")!=null)&&(request.getParameter("name2")!=null)&&(request.getParameter("name3")!=null)) {
     String name1 = request.getParameter("name1");
     String name2 = request.getParameter("name2");
     String name3 = request.getParameter("name3");
@@ -16,7 +17,8 @@
     cookie3.setMaxAge(30*60);
     response.addCookie(cookie1);
     response.addCookie(cookie2);
-    response.addCookie(cookie3);    
+    response.addCookie(cookie3);
+    }       
 %>
 
 <%   
